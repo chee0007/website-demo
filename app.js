@@ -19,48 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ============================================
-    // SPA PAGE NAVIGATION
+    // CLOSE MOBILE MENU ON LINK CLICK
     // ============================================
-    const navLinks = document.querySelectorAll('.nav-link');
-    const pages = document.querySelectorAll('.page-section');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetPage = this.getAttribute('data-page');
-            
-            // Hide all pages
-            pages.forEach(page => {
-                page.classList.add('hidden');
-            });
-            
-            // Show target page
-            const targetSection = document.getElementById(`${targetPage}-page`);
-            if (targetSection) {
-                targetSection.classList.remove('hidden');
-            }
-            
-            // Update active nav link (optional visual feedback)
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('active');
-            });
-            this.classList.add('active');
-            
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            }
-            
-            // Smooth scroll to top
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Close mobile menu
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
         });
     });
+    
+    // ============================================
+    // SMOOTH SCROLL BEHAVIOR (already handled by CSS scroll-behavior: smooth)
+    // ============================================
     
     // ============================================
     // PRODUCT "LEARN MORE" BUTTONS
@@ -69,14 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     learnMoreBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Navigate to contact page when "Learn More" is clicked
-            const contactLink = document.querySelector('[data-page="contact"]');
-            if (contactLink) {
-                contactLink.click();
-            }
-            
-            // Alternative: Show alert with more info
-            // alert('For more information about this product, please contact us!');
+            // Scroll to contact page when "Learn More" is clicked
+            document.getElementById('contact-page').scrollIntoView({ behavior: 'smooth' });
         });
     });
     
@@ -104,30 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ============================================
-    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // SMOOTH SCROLL FOR ANCHOR LINKS (Already handled by CSS)
+    // Browser native smooth scroll is enabled via CSS scroll-behavior
     // ============================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Skip if it's a page navigation link (handled above)
-            if (this.hasAttribute('data-page')) {
-                return;
-            }
-            
-            // Handle other anchor links if any
-            if (href !== '#') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    });
     
     // ============================================
     // ANIMATION ON SCROLL (OPTIONAL)
@@ -187,21 +134,4 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
-}
-
-/**
- * Show a specific page programmatically
- * @param {string} pageName - Name of the page (home, about, products, contact)
- */
-function showPage(pageName) {
-    const pages = document.querySelectorAll('.page-section');
-    pages.forEach(page => {
-        page.classList.add('hidden');
-    });
-    
-    const targetSection = document.getElementById(`${pageName}-page`);
-    if (targetSection) {
-        targetSection.classList.remove('hidden');
-        scrollToTop();
-    }
 }

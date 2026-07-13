@@ -403,8 +403,9 @@ img[src*="logo.jpg"] {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-.page-section.hidden {
-    display: none !important;
+/* Scroll offset for fixed navigation */
+.scroll-mt-20 {
+    scroll-margin-top: 5rem;
 }
 
 /* ============================================

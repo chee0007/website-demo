@@ -22,21 +22,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo on Left -->
-                <div class="flex items-center">
+                <div class="flex items-center flex-1">
                     <img src="logo.jpg" alt="Chye Kee Logo" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
                 </div>
                 
-                <!-- Company Name Centered -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-                    <h1 class="text-white font-bold text-xl tracking-wider">CHYE KEE BEANCURD MANUFACTURE CO</h1>
+                <!-- Company Name (shifted right, between logo and nav) -->
+                <div class="hidden lg:block flex-1 text-center">
+                    <h1 class="text-white font-bold text-lg tracking-wider">CHYE KEE BEANCURD MANUFACTURE CO</h1>
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" data-page="home" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">Home</a>
-                    <a href="#" data-page="about" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">About Us</a>
-                    <a href="#" data-page="products" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">Products</a>
-                    <a href="#" data-page="contact" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">Contact</a>
+                <div class="hidden md:flex space-x-6 flex-1 justify-end">
+                    <a href="#home-page" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">Home</a>
+                    <a href="#about-page" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">About Us</a>
+                    <a href="#products-page" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">Products</a>
+                    <a href="#contact-page" class="nav-link text-white hover:text-[#C5A059] transition-colors duration-300 font-medium">Contact</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -52,26 +52,26 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#B80F0A] border-t border-[#C5A059]">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" data-page="home" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">Home</a>
-                <a href="#" data-page="about" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">About Us</a>
-                <a href="#" data-page="products" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">Products</a>
-                <a href="#" data-page="contact" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">Contact</a>
+                <a href="#home-page" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">Home</a>
+                <a href="#about-page" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">About Us</a>
+                <a href="#products-page" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">Products</a>
+                <a href="#contact-page" class="nav-link mobile-nav-link block px-3 py-2 text-white hover:bg-[#C5A059] hover:text-white rounded transition-colors duration-300 font-medium">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content Container -->
-    <main class="pt-16">
+    <main class="pt-20">
         
         <!-- HOME PAGE -->
-        <section id="home-page" class="page-section">
+        <section id="home-page" class="page-section scroll-mt-20">
             <!-- Hero Section with Background -->
             <div class="hero-section bg-cover bg-center text-white py-32 px-4" style="background: linear-gradient(rgba(184, 15, 10, 0.85), rgba(138, 12, 8, 0.85)), url('background.jpg'); background-size: cover; background-position: center;">
                 <div class="max-w-6xl mx-auto text-center">
                     <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Premium Quality Beancurd Sheets</h1>
                     <p class="text-xl md:text-2xl mb-8 text-gray-100">Handcrafted with Traditional Methods, Delivering Fresh Excellence Since Generations</p>
                     <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto">We produce the finest fresh beancurd sheets using time-honoured techniques, ensuring superior texture, authentic taste, and natural goodness in every product.</p>
-                    <a href="#" data-page="products" class="inline-block bg-[#C5A059] hover:bg-[#A68642] text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <a href="#products-page" class="inline-block bg-[#C5A059] hover:bg-[#A68642] text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
                         View Our Products
                     </a>
                 </div>
@@ -109,7 +109,7 @@
         </section>
 
         <!-- ABOUT US PAGE -->
-        <section id="about-page" class="page-section hidden">
+        <section id="about-page" class="page-section scroll-mt-20">
             
             <div class="py-16 px-4">
                 <div class="max-w-4xl mx-auto">
@@ -126,7 +126,7 @@
                     </div>
                     
                     <div class="mt-12 text-center">
-                        <a href="#" data-page="products" class="inline-block bg-[#B80F0A] hover:bg-[#8A0C08] text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                        <a href="#products-page" class="inline-block bg-[#B80F0A] hover:bg-[#8A0C08] text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
                             Explore Our Products
                         </a>
                     </div>
@@ -135,7 +135,7 @@
         </section>
 
         <!-- PRODUCTS PAGE -->
-        <section id="products-page" class="page-section hidden">
+        <section id="products-page" class="page-section scroll-mt-20">
             
             <div class="py-16 px-4">
                 <div class="max-w-6xl mx-auto">
@@ -232,7 +232,7 @@
         </section>
 
         <!-- CONTACT PAGE -->
-        <section id="contact-page" class="page-section hidden">
+        <section id="contact-page" class="page-section scroll-mt-20">
             
             <div class="py-16 px-4">
                 <div class="max-w-6xl mx-auto">
