@@ -16,7 +16,8 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #2D3748;
+    background-color: #F7F8FA;
 }
 
 /* ============================================
@@ -86,6 +87,17 @@ nav {
     transition: all 0.3s ease;
 }
 
+/* Circular Logo Style */
+img[src*="logo.jpg"] {
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+img[src*="logo.jpg"]:hover {
+    transform: scale(1.1);
+}
+
 .nav-link {
     position: relative;
     transition: all 0.3s ease;
@@ -133,6 +145,20 @@ button:hover, .btn:hover {
 button:active, .btn:active {
     transform: translateY(0);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Interactive Hover Color */
+a:hover, button:hover {
+    transition: all 0.3s ease;
+}
+
+/* Primary button hover effect with interactive color */
+.bg-\[\#B80F0A\]:hover {
+    background-color: #D21404 !important;
+}
+
+.bg-\[\#C5A059\]:hover {
+    background-color: #A68642 !important;
 }
 
 /* ============================================
@@ -305,7 +331,7 @@ textarea:valid:not(:placeholder-shown) {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #E2E8F0;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -314,7 +340,7 @@ textarea:valid:not(:placeholder-shown) {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #B80F0A;
+    background: #D21404;
 }
 
 /* ============================================
@@ -335,10 +361,22 @@ img {
     display: block;
 }
 
-/* Logo and signboard specific */
-img[src*="logo.png"],
-img[src*="signboard.png"] {
-    object-fit: contain;
+/* Logo specific */
+img[src*="logo.jpg"] {
+    object-fit: cover;
+}
+
+/* Background image hero section */
+.hero-section {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll;
+    }
 }
 
 /* ============================================

@@ -20,11 +20,15 @@
     <!-- Fixed Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 bg-[#B80F0A] shadow-lg z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <img src="logo.png" alt="Chye Kee Logo" class="h-10 w-auto">
-                    <span class="text-white font-bold text-lg hidden sm:block">Chye Kee Beancurd</span>
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo on Left -->
+                <div class="flex items-center">
+                    <img src="logo.jpg" alt="Chye Kee Logo" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
+                </div>
+                
+                <!-- Company Name Centered -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
+                    <h1 class="text-white font-bold text-xl tracking-wider">CHYE KEE BEANCURD MANUFACTURE CO</h1>
                 </div>
                 
                 <!-- Desktop Navigation -->
@@ -61,15 +65,8 @@
         
         <!-- HOME PAGE -->
         <section id="home-page" class="page-section">
-            <!-- Signboard Header -->
-            <div class="bg-white py-8 shadow-md">
-                <div class="max-w-4xl mx-auto text-center px-4">
-                    <img src="signboard.png" alt="Chye Kee Beancurd Manufacture Co." class="mx-auto max-w-full h-auto" style="max-height: 200px;">
-                </div>
-            </div>
-            
-            <!-- Hero Section -->
-            <div class="bg-gradient-to-br from-[#B80F0A] to-[#8A0C08] text-white py-20 px-4">
+            <!-- Hero Section with Background -->
+            <div class="hero-section bg-cover bg-center text-white py-32 px-4" style="background: linear-gradient(rgba(184, 15, 10, 0.85), rgba(138, 12, 8, 0.85)), url('background.jpg'); background-size: cover; background-position: center;">
                 <div class="max-w-6xl mx-auto text-center">
                     <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Premium Quality Beancurd Sheets</h1>
                     <p class="text-xl md:text-2xl mb-8 text-gray-100">Handcrafted with Traditional Methods, Delivering Fresh Excellence Since Generations</p>
@@ -81,7 +78,7 @@
             </div>
             
             <!-- Features Grid -->
-            <div class="py-16 px-4 bg-gray-50">
+            <div class="py-16 px-4 bg-[#F7F8FA]">
                 <div class="max-w-6xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#B80F0A]">Why Choose Chye Kee?</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -113,11 +110,6 @@
 
         <!-- ABOUT US PAGE -->
         <section id="about-page" class="page-section hidden">
-            <div class="bg-white py-8 shadow-md">
-                <div class="max-w-4xl mx-auto text-center px-4">
-                    <img src="signboard.png" alt="Chye Kee Beancurd Manufacture Co." class="mx-auto max-w-full h-auto" style="max-height: 200px;">
-                </div>
-            </div>
             
             <div class="py-16 px-4">
                 <div class="max-w-4xl mx-auto">
@@ -144,11 +136,6 @@
 
         <!-- PRODUCTS PAGE -->
         <section id="products-page" class="page-section hidden">
-            <div class="bg-white py-8 shadow-md">
-                <div class="max-w-4xl mx-auto text-center px-4">
-                    <img src="signboard.png" alt="Chye Kee Beancurd Manufacture Co." class="mx-auto max-w-full h-auto" style="max-height: 200px;">
-                </div>
-            </div>
             
             <div class="py-16 px-4">
                 <div class="max-w-6xl mx-auto">
@@ -246,11 +233,6 @@
 
         <!-- CONTACT PAGE -->
         <section id="contact-page" class="page-section hidden">
-            <div class="bg-white py-8 shadow-md">
-                <div class="max-w-4xl mx-auto text-center px-4">
-                    <img src="signboard.png" alt="Chye Kee Beancurd Manufacture Co." class="mx-auto max-w-full h-auto" style="max-height: 200px;">
-                </div>
-            </div>
             
             <div class="py-16 px-4">
                 <div class="max-w-6xl mx-auto">
@@ -290,13 +272,13 @@
                                 </div>
                                 
                                 <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                                    <a href="https://wa.me/6590710276" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 text-center">
+                                    <a href="https://wa.me/6590710276" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center transform hover:scale-105">
                                         <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
                                     </a>
-                                    <a href="mailto:chyekeebeancurd@gmail.com" class="flex-1 bg-[#C5A059] hover:bg-[#A68642] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 text-center">
+                                    <a href="mailto:chyekeebeancurd@gmail.com" class="flex-1 bg-[#C5A059] hover:bg-[#A68642] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center transform hover:scale-105">
                                         <i class="fas fa-envelope mr-2"></i> Email Us
                                     </a>
-                                    <a href="https://www.facebook.com/p/Chye-Kee-Beancurd-Manufacture-Company-61573148757431/" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 text-center">
+                                    <a href="https://www.facebook.com/p/Chye-Kee-Beancurd-Manufacture-Company-61573148757431/" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center transform hover:scale-105">
                                         <i class="fab fa-facebook mr-2"></i> Facebook
                                     </a>
                                 </div>
