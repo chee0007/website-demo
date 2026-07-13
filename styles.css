@@ -11,6 +11,13 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 body {
@@ -320,27 +327,6 @@ textarea:valid:not(:placeholder-shown) {
     a[href^="http"]::after {
         content: " (" attr(href) ")";
     }
-}
-
-/* ============================================
-   CUSTOM SCROLLBAR
-   ============================================ */
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: #E2E8F0;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #C5A059;
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #D21404;
 }
 
 /* ============================================
