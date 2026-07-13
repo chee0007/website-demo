@@ -368,14 +368,15 @@ img[src*="logo.jpg"] {
 
 /* Background image hero section */
 .hero-section {
-    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
+    min-height: 100vh;
 }
 
 @media (max-width: 768px) {
     .hero-section {
-        background-attachment: scroll;
+        background-position: center center;
+        min-height: 80vh;
     }
 }
 
@@ -384,7 +385,11 @@ img[src*="logo.jpg"] {
    ============================================ */
 
 .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-shadow-lg {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
 .box-shadow-xl {
